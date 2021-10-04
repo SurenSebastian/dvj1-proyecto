@@ -61,7 +61,7 @@ public class LobiTheWolf : MonoBehaviour
             float step = speed * Time.deltaTime; // calculate distance to move
             transform.position = Vector3.MoveTowards(transform.position, target.transform.position, step);
             animator.SetFloat("Speed", 1);
-            if (Vector3.Distance(transform.position, target.transform.position) < 0.001f)
+            if (Vector3.Distance(transform.position, target.transform.position) < 1.3f)
             {
                 if (goToSceneName != null)
                 {
