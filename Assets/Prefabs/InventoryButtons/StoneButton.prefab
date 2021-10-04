@@ -146,3 +146,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stone: {fileID: 814429957070365376, guid: 2ee68d5344ff80e42875940e1bcb37ee, type: 3}
+  xPos: -3
+  yPos: -1

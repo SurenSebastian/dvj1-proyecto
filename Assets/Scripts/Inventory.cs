@@ -22,11 +22,19 @@ public class Inventory : MonoBehaviour
     {
         for (int i = 0; i < slots.Length; i++)
         {
+
+            print(isFull[i]);
+            print(slots[i]);
+
             if (isFull[i] == false)
             {
                 GameObject itemButton = go.GetComponent<Pickup>().itemButton;
                 // Add Item to Slot
                 isFull[i] = true;
+
+               
+               
+
                 Instantiate(itemButton, slots[i].transform, false);
                 Destroy(go);
                 break;
@@ -37,7 +45,7 @@ public class Inventory : MonoBehaviour
     public void clearSlot(int pos)
     {
         isFull[pos] = false;
-        slots[pos] = null;
+        Destroy(slots[pos].transform.GetChild(0).gameObject);
     }
 }
 
